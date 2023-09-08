@@ -8,8 +8,7 @@ const today = days[date.getDay()-1]
 
 const updateTime = () => {
   const date = new Date()
-  const utcTime = date.toISOString().substr(11,8);
-  timeUtc.textContent = utcTime
+  timeUtc.textContent = date.getTime()
 }
 
 const todayTag = document.getElementById('today')
@@ -17,4 +16,4 @@ const timeUtc = document.getElementById('utc')
 
 todayTag.textContent=today
 
-setInterval(updateTime,1000)
+setInterval(updateTime,1)
